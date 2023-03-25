@@ -27,3 +27,7 @@ gsettings set org.gnome.eog.ui sidebar false
 gsettings set org.gnome.eog.view extrapolate false
 gsettings set org.gnome.eog.view use-background-color false
 
+# file-roller
+gsettings set org.gnome.FileRoller.UI window-height 940
+gsettings set org.gnome.FileRoller.UI window-width 820
+
