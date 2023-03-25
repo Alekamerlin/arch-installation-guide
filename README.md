@@ -13,6 +13,11 @@ Enable `gdm.service`:
 # systemctl enable gdm.service
 ```
 
+Reboot the system and launch the gsettings script for each your user:
+```
+$ sh scripts/gsettings.sh
+```
+
 ### Firefox
 
 Install Firefox:
