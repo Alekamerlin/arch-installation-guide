@@ -47,3 +47,12 @@ gsettings set org.gnome.gedit.state.window size '(960, 1000)'
 gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter dynamic-workspaces false
 
+# file chooser and nautilus
+gsettings set org.gtk.gtk4.Settings.FileChooser sidebar-width 250
+gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
+gsettings set org.gtk.gtk4.Settings.FileChooser window-size '(1200, 1000)'
+gsettings set org.gtk.Settings.FileChooser sidebar-width 250
+gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+gsettings set org.gtk.Settings.FileChooser window-size '(1200, 1000)'
+gsettings set org.gnome.nautilus.window-state initial-size '(1040, 710)'
+
