@@ -31,3 +31,15 @@ gsettings set org.gnome.eog.view use-background-color false
 gsettings set org.gnome.FileRoller.UI window-height 940
 gsettings set org.gnome.FileRoller.UI window-width 820
 
+# gedit
+gsettings set org.gnome.gedit.plugins.spell highlight-misspelled true
+gsettings set org.gnome.gedit.plugins active-plugins "['quickhighlight', 'spell', 'codecomment', 'git', 'colorpicker', 'smartspaces', 'docinfo', 'modelines', 'drawspaces', 'colorschemer', 'sort', 'multiedit', 'filebrowser', 'time', 'wordcompletion', 'bracketcompletion']"
+gsettings set org.gnome.gedit.preferences.editor display-right-margin true
+# gsettings set org.gnome.gedit.preferences.editor editor-font 'Source Code Pro 10'
+gsettings set org.gnome.gedit.preferences.editor insert-spaces true
+gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
+gsettings set org.gnome.gedit.preferences.editor tabs-size 'uint32 4'
+# gsettings set org.gnome.gedit.preferences.editor use-default-font false
+gsettings set org.gnome.gedit.state.file-chooser open-recent false
+gsettings set org.gnome.gedit.state.window size '(960, 1000)'
+
