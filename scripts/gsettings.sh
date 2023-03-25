@@ -60,3 +60,9 @@ gsettings set org.gnome.nautilus.window-state initial-size '(1040, 710)'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 3600
 
+# shell
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
+gsettings set org.gnome.shell.overrides dynamic-workspaces false
+gsettings set org.gnome.shell.window-switcher app-icon-mode 'app-icon-only'
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Epiphany.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop']"
+
