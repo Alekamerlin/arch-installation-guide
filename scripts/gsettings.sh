@@ -20,3 +20,10 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift
 gsettings set org.gnome.desktop.wm.preferences button-layout ':'
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 2
 
+# eog
+gsettings set org.gnome.eog.fullscreen loop false
+gsettings set org.gnome.eog.fullscreen upscale false
+gsettings set org.gnome.eog.ui sidebar false
+gsettings set org.gnome.eog.view extrapolate false
+gsettings set org.gnome.eog.view use-background-color false
+
