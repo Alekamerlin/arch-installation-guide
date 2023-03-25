@@ -56,3 +56,7 @@ gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.Settings.FileChooser window-size '(1200, 1000)'
 gsettings set org.gnome.nautilus.window-state initial-size '(1040, 710)'
 
+# settings-daemon
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 3600
+
