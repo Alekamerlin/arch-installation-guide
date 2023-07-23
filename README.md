@@ -45,6 +45,33 @@ Install the multimedia framework and its plugins:
 # pacman -S gstreamer gstreamer-vaapi gst-libav gst-plugin-pipewire gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
 ```
 
+### Users
+
+Create a user:
+```
+# useradd -m user_name
+```
+
+Set a password for the new user:
+```
+# passwd user_name
+```
+
+Install `xdg-user-dirs` to manage user directories:
+```
+# pacman -S xdg-user-dirs
+```
+
+Create user directories:
+```
+# su user_name
+
+$ xdg-user-dirs-update
+
+$ exit
+```
+Repeat this for each created user.
+
 ### Gnome DE
 
 Install gnome packages:
