@@ -38,11 +38,18 @@ If so, enable and then start the bluetooth service:
 # systemctl start bluetooth.service
 ```
 
+### Multimedia
+
+Install the multimedia framework and its plugins:
+```
+# pacman -S gstreamer gstreamer-vaapi gst-libav gst-plugin-pipewire gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
+```
+
 ### Gnome DE
 
 Install gnome packages:
 ```
-# pacman -S gdm gnome-shell gnome-desktop gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-sound-recorder gnome-system-monitor gnome-terminal gnome-bluetooth-3.0 epiphany totem evince eog gedit gedit-plugins gucharmap libgit2-glib dconf-editor
+# pacman -S gdm gnome-shell gnome-desktop gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-sound-recorder gnome-system-monitor gnome-terminal gnome-bluetooth-3.0 epiphany totem evince eog gedit gedit-plugins gucharmap libgit2-glib gst-plugin-gtk dconf-editor
 ```
 
 Enable `gdm.service`:
