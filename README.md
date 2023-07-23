@@ -44,6 +44,13 @@ Install packages to support Wayland portals for screen sharing as an example:
 # pacman -S xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome
 ```
 
+### Thumbnails
+
+Install packages to provide thumbnail preview:
+```
+# pacman -S tumbler webp-pixbuf-loader ffmpegthumbnailer libgsf gnome-epub-thumbnailer freetype2
+```
+
 ### Firefox
 
 Install Firefox:
