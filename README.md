@@ -51,3 +51,25 @@ $ sh scripts/firefox.sh
 
 Do it for each your user and then reboot the system.
 
+### Chromium
+
+Sources:
+- https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
+- https://wiki.archlinux.org/title/Arch_User_Repository
+
+Install the Wayland version of Chromium with VA-API support from the AUR:
+```
+$ git clone https://aur.archlinux.org/chromium-wayland-vaapi.git
+
+$ ch chromium-wayland-vaapi
+
+$ makepkg
+
+# pacman -U chromium-wayland-vaapi-*-x86_64.pkg.tar.zst
+```
+
+This might be enough, but if hardware decoding doesn't work, try to enbaling `VaapiVideoDecoder`:
+```
+echo "--enable-features=VaapiVideoDecoder" >> ~/.config/chromium-flags.conf
+```
+
