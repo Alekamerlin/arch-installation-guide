@@ -1,6 +1,15 @@
 # arch-installation-guide
 A quick installation guide with automation scripts for Arch Linux.
 
+### Video
+
+Install packages to support 3D acceleration and VA-API for Intel graphics:
+```
+# pacman -S mesa vulkan-intel intel-media-driver xf86-video-intel
+```
+
+> `xf86-video-intel` not recommended.
+
 ### Bluetooth
 
 Install the necessary packages:
