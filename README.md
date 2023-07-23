@@ -57,7 +57,7 @@ Sources:
 - https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
 - https://wiki.archlinux.org/title/Arch_User_Repository
 
-Install the Wayland version of Chromium with VA-API support from the AUR:
+Build and install the Wayland version of Chromium with VA-API support from the AUR:
 ```
 $ git clone https://aur.archlinux.org/chromium-wayland-vaapi.git
 
@@ -72,4 +72,39 @@ This might be enough, but if hardware decoding doesn't work, try to enbaling `Va
 ```
 echo "--enable-features=VaapiVideoDecoder" >> ~/.config/chromium-flags.conf
 ```
+
+### VSCodium
+
+Install the necessary packages:
+```
+# pacman -S jq git-lfs gulp yarn
+```
+
+Build and install the nvm package:
+```
+$ git clone https://aur.archlinux.org/nvm.git
+
+$ cd nvm
+
+$ makepkg
+
+# pacman -U nvm-*-any.pkg.tar.zst
+```
+
+Build and install the VSCodium package:
+```
+$ cd ../
+
+$ git clone https://aur.archlinux.org/vscodium.git
+
+$ cd vscodium
+
+$ makepkg
+
+# pacman -U vscodium-*-x86_64.pkg.tar.zst
+```
+
+For further reading about Wayland support:
+- https://github.com/VSCodium/vscodium/discussions/1098
+- https://github.com/microsoft/vscode/issues/168620
 
