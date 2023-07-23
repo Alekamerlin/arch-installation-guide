@@ -37,6 +37,13 @@ Reboot the system and launch the gsettings script for each your user:
 $ sh scripts/gsettings.sh
 ```
 
+### Portals
+
+Install packages to support Wayland portals for screen sharing as an example:
+```
+# pacman -S xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome
+```
+
 ### Firefox
 
 Install Firefox:
