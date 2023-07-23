@@ -43,6 +43,10 @@ gsettings set org.gnome.gedit.preferences.editor tabs-size 'uint32 4'
 gsettings set org.gnome.gedit.state.file-chooser open-recent false
 gsettings set org.gnome.gedit.state.window size '(960, 1000)'
 
+# gnome-system-monitor
+gsettings set org.gnome.gnome-system-monitor current-tab 'resources'
+gsettings set org.gnome.gnome-system-monitor window-state '(1103, 923, 26, 23)'
+
 # mutter
 gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter dynamic-workspaces false
