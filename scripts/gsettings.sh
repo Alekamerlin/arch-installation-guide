@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# control-center
+gsettings set org.gnome.Settings window-state '(980, 940, false)'
+
 # desktop
 gsettings set org.gnome.desktop.input-sources per-window true
 # gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us')]"
