@@ -10,6 +10,15 @@ Install packages to support 3D acceleration and VA-API for Intel graphics:
 
 > `xf86-video-intel` not recommended.
 
+### Audio
+
+Install packages to support audio on the system:
+```
+# pacman -S sof-firmware pipewire pipewire-audio pipewire-jack pipewire-pulse wireplumber
+```
+
+> Use `alsa-firmware` instead of `sof-firmware` for older sound systems.
+
 ### Bluetooth
 
 Install the necessary packages:
