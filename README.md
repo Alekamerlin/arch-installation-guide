@@ -119,9 +119,9 @@ Do it for each your user and then reboot the system.
 
 ### Chromium
 
-Sources:
-- https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
-- https://wiki.archlinux.org/title/Arch_User_Repository
+> Sources:
+> - https://wiki.archlinux.org/title/Chromium#Hardware_video_acceleration
+> - https://wiki.archlinux.org/title/Arch_User_Repository
 
 Build and install the Wayland version of Chromium with VA-API support from the AUR:
 ```
@@ -140,6 +140,11 @@ echo "--enable-features=VaapiVideoDecoder" >> ~/.config/chromium-flags.conf
 ```
 
 ### VSCodium
+
+> Sources:
+> - https://wiki.archlinux.org/title/Visual_Studio_Code
+> - https://wiki.archlinux.org/title/Wayland#Electron
+> - https://wiki.archlinux.org/title/Arch_User_Repository
 
 Install the necessary packages:
 ```
@@ -170,7 +175,7 @@ $ makepkg
 # pacman -U vscodium-*-x86_64.pkg.tar.zst
 ```
 
-For further reading about Wayland support:
-- https://github.com/VSCodium/vscodium/discussions/1098
-- https://github.com/microsoft/vscode/issues/168620
+Add `--enable-features=WaylandWindowDecorations --ozone-platform-hint=auto` to the `Exec` command in the files:
+- /usr/share/applications/vscodium.desktop
+- /usr/share/applications/vscodium-uri-handler.desktop
 
