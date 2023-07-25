@@ -1,6 +1,13 @@
 # arch-installation-guide
 A quick installation guide with automation scripts for Arch Linux.
 
+### Installation
+
+Install main packages:
+```
+# pacstrap -K /mnt base base-devel linux linux-firmware grub-install dhcpcd vim
+```
+
 ### Video
 
 Install packages to support 3D acceleration and VA-API for Intel graphics:
