@@ -8,6 +8,75 @@ Install main packages:
 # pacstrap -K /mnt base base-devel linux linux-firmware grub-install dhcpcd vim
 ```
 
+### Configure the system
+
+Generate an `fstab` file:
+```
+# genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+Enter to the new system as root:
+```
+# arch-chroot /mnt
+```
+
+Create a password to the system root:
+```
+# passwd
+```
+
+Install `grub`:
+```
+# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+```
+
+Set the time zone:
+```
+# ln -sf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
+```
+Where `Europe/Amsterdam` is your region and city.
+
+Set up the hardware clock:
+```
+# hwclock --systohc
+```
+
+Create the hostname file:
+```
+# echo machinename > /etc/hostname
+```
+Where `machinename` is your hostname (the name of your PC).
+
+Uncomment `en_US.UTF-8 UTF-8` and other required locales in `/etc/locale.gen`:
+```
+# vim /etc/locale.gen
+```
+
+Save the file and generate locales:
+```
+# locale-gen
+```
+
+Set up the system locale:
+```
+# localectl set-locale LANG=en_US.UTF-8
+```
+
+Reboot the PC:
+```
+# reboot
+```
+
+Boot the new installed system and enable the `dhcpcd` service:
+```
+# systemctl enable dhcpcd.service
+```
+
+Connect to the internet via DHCP and test the connection:
+```
+# ping duckduckgo.com
+```
+
 ### Video
 
 Install packages to support 3D acceleration and VA-API for Intel graphics:
