@@ -1,6 +1,32 @@
 # arch-installation-guide
 A quick installation guide with automation scripts for Arch Linux.
 
+### Prepare to installation
+
+Connect to the internet (the easiest way is DHCP) and test the connection:
+```
+# ping duckduckgo.com
+```
+
+Mount the system disk:
+```
+# mount /dev/sda2 /mnt
+
+# mount --mkdir /dev/sda1 /mnt/boot
+
+# mount --mkdir /dev/sda4 /mnt/home
+```
+
+Enable swap:
+```
+# swapon /dev/sda3
+```
+
+Update the system clock:
+```
+# timedatectl
+```
+
 ### Installation
 
 Install main packages:
