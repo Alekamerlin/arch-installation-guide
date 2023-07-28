@@ -1,6 +1,36 @@
 # arch-installation-guide
 A quick installation guide with automation scripts for Arch Linux.
 
+### Prepare an installation disk
+
+Download the ISO image and its signature and checksum (archlinux-x86\_64.iso, archlinux-x86\_64.iso.sig, b2sums.txt) from the Download page: https://archlinux.org/download/.
+
+> Use the commands below in the directory where you downloaded the files.
+
+Verify the checksum of the downloaded ISO image:
+```
+$ b2sum -c b2sums.txt
+```
+
+Verify the signature of the downloaded ISO image:
+```
+$ gpg --keyserver-options auto-key-retrieve --verify archlinux-x86_64.iso.sig
+```
+
+Create an installation USB drive:
+```
+# dd bs=4M if=archlinux-x86_64.iso of=/dev/sdb conv=fsync oflag=direct status=progress
+```
+Where `/dev/sdb` is your USB drive you want to use as the installation drive.
+
+To boot an installation image from a USB drive, you should disable Secure Boot on the computer you will boot the image from, because the installation image doesn't support Secure Boot.
+
+Check the boot mode after booting the installation image:
+```
+# ls /sys/firmware/efi/efivars
+```
+The command will print directory items if you booted in UEFI mode. This guide is only for UEFI mode, so you should check the current mode.
+
 ### Prepare a system disk
 
 Create a partition table:
