@@ -1,6 +1,44 @@
 # arch-installation-guide
 A quick installation guide with automation scripts for Arch Linux.
 
+### Prepare a system disk
+
+Create a partition table:
+```
+# parted /dev/sda mklabel gpt
+```
+Where `/dev/sda` is the SDD/HDD drive you want to install Arch.
+
+Create parts:
+```
+# parted /dev/sda mkpart EFI fat32 1M 525M
+
+# parted /dev/sda mkpart root ext4 525M 105GB
+
+# parted /dev/sda mkpart swap linux-swap 105GB 160GB
+
+# parted /dev/sda mkpart home ext4 160GB 260GB
+
+# parted /dev/sda mkpart media ext4 260GB 512GB
+```
+
+> For SSD the order of the parts doesn't matter, but for HDD it does.
+
+> I usually create the media part because I use few accounts on the same computer, so the media is a place for common files like music and photos.
+
+Format partitions:
+```
+# mkfs.fat -F 32 /dev/sda1
+
+# mkfs.ext4 /dev/sda2
+
+# mkswap /dev/sda3
+
+# mkfs.ext4 /dev/sda4
+
+# mkfs.ext4 /dev/sda5
+```
+
 ### Prepare to installation
 
 Connect to the internet (the easiest way is DHCP) and test the connection:
