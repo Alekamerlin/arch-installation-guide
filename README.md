@@ -243,6 +243,23 @@ Install packages to provide thumbnail preview:
 # pacman -S tumbler webp-pixbuf-loader ffmpegthumbnailer libgsf gnome-epub-thumbnailer freetype2
 ```
 
+### Media devices
+
+For support MTP (Android phones, tablets and music players) install `gvfs-mtp`:
+```
+# pacman -S gvfs-mtp
+```
+
+For support PTP (digital camera) install `gvfs-gphoto2`:
+```
+# pacman -S gvfs-gphoto2
+```
+
+For support iOS (iPhone and iPad) install `gvfs-afc`:
+```
+# pacman -S gvfs-afc ifuse
+```
+
 ### Firefox
 
 Install Firefox:
