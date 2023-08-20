@@ -208,6 +208,20 @@ If so, enable and then start the bluetooth service:
 # systemctl start bluetooth.service
 ```
 
+### Webcam
+
+Your webcam probably works out of the box, if not, check the manual: https://wiki.archlinux.org/title/Webcam_setup
+
+Install `v4l-utils` for webcam configuration (brightness, effects etc):
+```
+# pacman -S v4l-utils
+```
+
+Or `cameractrls`:
+```
+# pacman -S cameractrls
+```
+
 ### Multimedia
 
 Install the multimedia framework and its plugins:
