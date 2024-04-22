@@ -287,14 +287,14 @@ Install packages to provide thumbnail preview:
 # pacman -S tumbler webp-pixbuf-loader ffmpegthumbnailer libgsf gnome-epub-thumbnailer freetype2
 ```
 
-### Media devices
+### Media devices & online storages
 
 For support MTP (Android phones, tablets and music players) install `gvfs-mtp`:
 ```
 # pacman -S gvfs-mtp
 ```
 
-For support PTP (digital camera) install `gvfs-gphoto2`:
+For support PTP (digital cameras and smartphone photos) install `gvfs-gphoto2`:
 ```
 # pacman -S gvfs-gphoto2
 ```
@@ -302,6 +302,31 @@ For support PTP (digital camera) install `gvfs-gphoto2`:
 For support iOS (iPhone and iPad) install `gvfs-afc`:
 ```
 # pacman -S gvfs-afc ifuse
+```
+
+For support NFS (Network File System) install `gvfs-nfs`:
+```
+# pacman -S gvfs-nfs
+```
+
+For support SMB/CIFS (Server Message Block/Common Internet File System) install `gvfs-smb`:
+```
+# pacman -S gvfs-smb
+```
+
+For support virtual filesystems (e.g. OwnCloud) install `gvfs-goa`:
+```
+# pacman -S gvfs-goa
+```
+
+For support Google Drive install `gvfs-google`:
+```
+# pacman -S gvfs-google
+```
+
+For support Microsoft OneDrive install `gvfs-onedrive`:
+```
+# pacman -S gvfs-onedrive
 ```
 
 ### Firefox
