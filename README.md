@@ -420,8 +420,3 @@ $ makepkg
 
 # pacman -U vscodium-*-x86_64.pkg.tar.zst
 ```
-
-Add `--enable-features=WaylandWindowDecorations --ozone-platform-hint=auto` to the `Exec` command in the files:
-- /usr/share/applications/vscodium.desktop
-- /usr/share/applications/vscodium-uri-handler.desktop
-
