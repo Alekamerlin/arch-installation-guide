@@ -349,6 +349,24 @@ For support Microsoft OneDrive install `gvfs-onedrive`:
 # pacman -S gvfs-onedrive
 ```
 
+### Office
+
+For basic use, install a word processor and spreadsheet editor:
+```
+# pacman -S abiword gnumeric
+```
+
+Or LibreOffice for more complex work:
+```
+# pacman -S libreoffice-fresh
+```
+
+As well as needed language packs:
+```
+# pacman -S libreoffice-fresh-*
+```
+Where \* is the language code. For example, the package will be `libreoffice-fresh-en-gb` for `en-gb`.
+
 ### Firefox
 
 Install Firefox:
