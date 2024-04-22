@@ -365,7 +365,7 @@ As well as needed language packs:
 ```
 # pacman -S libreoffice-fresh-*
 ```
-Where \* is the language code. For example, the package will be `libreoffice-fresh-en-gb` for `en-gb`.
+Where \* is the language code. For example, the package will be `libreoffice-fresh-en-gb` for `en-gb`. You can find available packages [here](https://archlinux.org/packages/?sort=&q=libreoffice-fresh&maintainer=&flagged=).
 
 ### Firefox
 
