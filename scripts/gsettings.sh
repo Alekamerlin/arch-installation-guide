@@ -12,10 +12,10 @@ gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'full'
 # gsettings set org.gnome.desktop.interface font-name 'Cantarell 11'
 gsettings set org.gnome.desktop.interface font-rgba-order 'rgba'
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 # gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 10'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 # gsettings set org.gnome.desktop.peripherals.mouse speed '-0.25431034482758619'
-gsettings set org.gnome.desktop.sound event-sounds true
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
