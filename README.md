@@ -260,7 +260,27 @@ Repeat this for each created user.
 
 Install gnome packages:
 ```
-# pacman -S gdm gnome-shell gnome-desktop gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-sound-recorder gnome-system-monitor gnome-terminal gnome-bluetooth-3.0 epiphany totem evince eog gedit gedit-plugins gucharmap libgit2-glib gst-plugin-gtk dconf-editor
+# pacman -S gdm gnome-shell gnome-shell-extensions gnome-desktop gnome-backgrounds gnome-bluetooth-3.0 gnome-calculator gnome-characters gnome-control-center gnome-disk-utility gnome-font-viewer gnome-sound-recorder gnome-system-monitor gnome-user-docs gnome-console gnome-text-editor dconf-editor file-roller nautilus tracker3-miners gucharmap epiphany evince totem loupe
+```
+
+> You can install `gnome-terminal`, `gedit` and `eog` instead of `gnome-console`, `gnome-text-editor` and `loupe`, if their functionality doesn't cover your needs:
+```
+# pacman -S gnome-terminal gedit gedit-plugins libgit2-glib eog
+```
+
+Also you may like these additional apps:
+```
+# pacman -S gnome-boxes gnome-calendar gnome-clocks gnome-connections gnome-contacts gnome-logs gnome-maps gnome-notes gnome-photos gnome-recipes gnome-tweaks gnome-weather alacarte baobab endeavour geary ghex gitg polari seahorse simple-scan snapshot sysprof
+```
+
+> You can install `evolution` and `cheese` instead of `geary` and `snapshot`, if their functionality doesn't cover your needs:
+```
+# pacman -S evolution cheese
+```
+
+Of course, here are some basic games:
+```
+# pacman -S gnome-2048 gnome-chess gnome-games gnome-klotski gnome-mahjongg gnome-mines gnome-nibbles gnome-robots gnome-sudoku gnome-taquin gnome-tetravex aisleriot hitori iagno lightsoff quadrapassel swell-foop tali
 ```
 
 Enable `gdm.service`:
