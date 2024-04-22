@@ -52,7 +52,9 @@ gsettings set org.gnome.gedit.state.window size '(960, 1000)'
 
 # gnome-system-monitor
 gsettings set org.gnome.gnome-system-monitor current-tab 'resources'
-gsettings set org.gnome.gnome-system-monitor window-state '(1103, 923, 26, 23)'
+gsettings set org.gnome.gnome-system-monitor show-whose-processes 'all'
+gsettings set org.gnome.gnome-system-monitor window-height 924
+gsettings set org.gnome.gnome-system-monitor window-width 1104
 
 # mutter
 gsettings set org.gnome.mutter center-new-windows true
