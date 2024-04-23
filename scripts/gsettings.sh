@@ -133,3 +133,15 @@ elif command -v epiphany &> /dev/null &&
     command -v gedit &> /dev/null; then
     gsettings set org.gnome.shell favorite-apps "['org.gnome.Epiphany.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop']"
 fi
+
+# text-editor
+if command -v gnome-text-editor &> /dev/null; then
+    gsettings set org.gnome.TextEditor draw-spaces "['space', 'tab', 'nbsp', 'leading', 'text', 'trailing']"
+    gsettings set org.gnome.TextEditor highlight-current-line true
+    gsettings set org.gnome.TextEditor indent-style 'space'
+    gsettings set org.gnome.TextEditor restore-session false
+    gsettings set org.gnome.TextEditor show-line-numbers true
+    gsettings set org.gnome.TextEditor show-right-margin true
+    gsettings set org.gnome.TextEditor style-variant 'dark'
+    gsettings set org.gnome.TextEditor tab-width 4
+fi
