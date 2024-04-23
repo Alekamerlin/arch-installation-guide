@@ -60,8 +60,15 @@ fi
 
 # file-roller
 if command -v file-roller &> /dev/null; then
-    gsettings set org.gnome.FileRoller.UI window-height 940
-    gsettings set org.gnome.FileRoller.UI window-width 820
+    gsettings set org.gnome.FileRoller.Dialogs.Add height 1000
+    gsettings set org.gnome.FileRoller.Dialogs.Add width 1200
+    gsettings set org.gnome.FileRoller.Dialogs.Extract height 1000
+    gsettings set org.gnome.FileRoller.Dialogs.Extract width 1200
+    gsettings set org.gnome.FileRoller.Dialogs.LastOutput height 1000
+    gsettings set org.gnome.FileRoller.Dialogs.LastOutput width 1200
+    gsettings set org.gnome.FileRoller.FileSelector sidebar-size 250
+    gsettings set org.gnome.FileRoller.UI window-height 1000
+    gsettings set org.gnome.FileRoller.UI window-width 800
 fi
 
 # gedit
