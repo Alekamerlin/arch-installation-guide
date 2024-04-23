@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# calculator
+if command -v gnome-calculator &> /dev/null; then
+    gsettings set org.gnome.calculator show-thousands true
+fi
+
 # control-center
 if command -v gnome-control-center &> /dev/null; then
     gsettings set org.gnome.Settings window-state '(980, 940, false)'
