@@ -118,4 +118,18 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-tim
 # shell
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.shell.window-switcher app-icon-mode 'app-icon-only'
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Epiphany.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop']"
+gsettings set org.gnome.shell disabled-extensions "['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
+gsettings set org.gnome.shell enabled-extensions "['drive-menu@gnome-shell-extensions.gcampax.github.com']"
+if command -v epiphany &> /dev/null &&
+    command -v nautilus &> /dev/null &&
+    command -v gnome-calculator &> /dev/null &&
+    command -v kgx &> /dev/null &&
+    command -v gnome-text-editor &> /dev/null; then
+    gsettings set org.gnome.shell favorite-apps "['org.gnome.Epiphany.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Console.desktop', 'org.gnome.TextEditor.desktop']"
+elif command -v epiphany &> /dev/null &&
+    command -v nautilus &> /dev/null &&
+    command -v gnome-calculator &> /dev/null &&
+    command -v gnome-terminal &> /dev/null &&
+    command -v gedit &> /dev/null; then
+    gsettings set org.gnome.shell favorite-apps "['org.gnome.Epiphany.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop']"
+fi
