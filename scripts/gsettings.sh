@@ -107,7 +107,8 @@ if command -v nautilus &> /dev/null; then
     gsettings set org.gtk.Settings.FileChooser sidebar-width 250
     gsettings set org.gtk.Settings.FileChooser sort-directories-first true
     gsettings set org.gtk.Settings.FileChooser window-size '(1200, 1000)'
-    gsettings set org.gnome.nautilus.window-state initial-size '(1040, 710)'
+    gsettings set org.gnome.nautilus.preferences show-create-link true
+    gsettings set org.gnome.nautilus.window-state initial-size '(980, 620)'
 fi
 
 # settings-daemon
