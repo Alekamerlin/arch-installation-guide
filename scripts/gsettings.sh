@@ -12,7 +12,7 @@ fi
 
 # control-center
 if command -v gnome-control-center &> /dev/null; then
-    gsettings set org.gnome.Settings window-state '(980, 940, false)'
+    gsettings set org.gnome.Settings window-state '(1130, 1010, false)'
 fi
 
 # desktop
