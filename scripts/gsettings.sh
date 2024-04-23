@@ -89,8 +89,8 @@ fi
 if command -v gnome-system-monitor &> /dev/null; then
     gsettings set org.gnome.gnome-system-monitor current-tab 'resources'
     gsettings set org.gnome.gnome-system-monitor show-whose-processes 'all'
-    gsettings set org.gnome.gnome-system-monitor window-height 924
-    gsettings set org.gnome.gnome-system-monitor window-width 1104
+    gsettings set org.gnome.gnome-system-monitor window-height 1010
+    gsettings set org.gnome.gnome-system-monitor window-width 1130
 fi
 
 # mutter
