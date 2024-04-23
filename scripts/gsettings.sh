@@ -49,7 +49,7 @@ fi
 # epiphany
 if command -v epiphany &> /dev/null; then
     gsettings set org.gnome.Epiphany.state:/org/gnome/epiphany/state/ window-size '(1320, 1120)'
-    # gsettings set org.gnome.Epiphany.web:/org/gnome/epiphany/web/ language "['system', 'us']"
+    gsettings set org.gnome.Epiphany.web:/org/gnome/epiphany/web/ show-developer-actions true
 fi
 
 # file-roller
