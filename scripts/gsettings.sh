@@ -27,11 +27,13 @@ gsettings set org.gnome.desktop.interface font-rgba-order 'rgba'
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 # gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 10'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
-# gsettings set org.gnome.desktop.peripherals.mouse speed '-0.25431034482758619'
+gsettings set org.gnome.desktop.peripherals.mouse speed '-0.2'
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'minimize'
 gsettings set org.gnome.desktop.wm.preferences button-layout ':'
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 2
 
