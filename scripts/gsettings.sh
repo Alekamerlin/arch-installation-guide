@@ -52,6 +52,12 @@ if command -v epiphany &> /dev/null; then
     gsettings set org.gnome.Epiphany.web:/org/gnome/epiphany/web/ show-developer-actions true
 fi
 
+# extensions
+if command -v gnome-extensions &> /dev/null; then
+    gsettings set org.gnome.Extensions window-height 960
+    gsettings set org.gnome.Extensions window-width 800
+fi
+
 # file-roller
 if command -v file-roller &> /dev/null; then
     gsettings set org.gnome.FileRoller.UI window-height 940
