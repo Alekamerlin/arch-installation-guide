@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sidebar_width=250
+
 # calculator
 if command -v gnome-calculator &> /dev/null; then
     gsettings set org.gnome.calculator show-thousands true
@@ -66,7 +68,7 @@ if command -v file-roller &> /dev/null; then
     gsettings set org.gnome.FileRoller.Dialogs.Extract width 1200
     gsettings set org.gnome.FileRoller.Dialogs.LastOutput height 1000
     gsettings set org.gnome.FileRoller.Dialogs.LastOutput width 1200
-    gsettings set org.gnome.FileRoller.FileSelector sidebar-size 250
+    gsettings set org.gnome.FileRoller.FileSelector sidebar-size $sidebar_width
     gsettings set org.gnome.FileRoller.UI window-height 1000
     gsettings set org.gnome.FileRoller.UI window-width 800
 fi
@@ -101,10 +103,10 @@ fi
 
 # file chooser and nautilus
 if command -v nautilus &> /dev/null; then
-    gsettings set org.gtk.gtk4.Settings.FileChooser sidebar-width 250
+    gsettings set org.gtk.gtk4.Settings.FileChooser sidebar-width $sidebar_width
     gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
     gsettings set org.gtk.gtk4.Settings.FileChooser window-size '(1200, 1000)'
-    gsettings set org.gtk.Settings.FileChooser sidebar-width 250
+    gsettings set org.gtk.Settings.FileChooser sidebar-width $sidebar_width
     gsettings set org.gtk.Settings.FileChooser sort-directories-first true
     gsettings set org.gtk.Settings.FileChooser window-size '(1200, 1000)'
     gsettings set org.gnome.nautilus.preferences show-create-link true
