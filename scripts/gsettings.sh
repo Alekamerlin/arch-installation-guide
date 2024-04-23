@@ -82,7 +82,7 @@ if command -v gedit &> /dev/null; then
     gsettings set org.gnome.gedit.preferences.editor tabs-size 'uint32 4'
     # gsettings set org.gnome.gedit.preferences.editor use-default-font false
     gsettings set org.gnome.gedit.state.file-chooser open-recent false
-    gsettings set org.gnome.gedit.state.window size '(960, 1000)'
+    gsettings set org.gnome.gedit.state.window size '(800, 1000)'
 fi
 
 # gnome-system-monitor
