@@ -1,8 +1,13 @@
 #!/bin/bash
 
 sidebar_width=250
+
 window_height=1000
 window_height_big=1010
+
+window_width=800
+window_width_big=1130
+window_width_large=1200
 
 # calculator
 if command -v gnome-calculator &> /dev/null; then
@@ -11,12 +16,12 @@ fi
 
 # console
 if command -v kgx &> /dev/null; then
-    gsettings set org.gnome.Console last-window-size "(800, $window_height)"
+    gsettings set org.gnome.Console last-window-size "($window_width, $window_height)"
 fi
 
 # control-center
 if command -v gnome-control-center &> /dev/null; then
-    gsettings set org.gnome.Settings window-state "(1130, $window_height_big, false)"
+    gsettings set org.gnome.Settings window-state "($window_width_big, $window_height_big, false)"
 fi
 
 # desktop
@@ -59,20 +64,20 @@ fi
 # extensions
 if command -v gnome-extensions &> /dev/null; then
     gsettings set org.gnome.Extensions window-height $window_height
-    gsettings set org.gnome.Extensions window-width 800
+    gsettings set org.gnome.Extensions window-width $window_width
 fi
 
 # file-roller
 if command -v file-roller &> /dev/null; then
     gsettings set org.gnome.FileRoller.Dialogs.Add height $window_height
-    gsettings set org.gnome.FileRoller.Dialogs.Add width 1200
+    gsettings set org.gnome.FileRoller.Dialogs.Add width $window_width_large
     gsettings set org.gnome.FileRoller.Dialogs.Extract height $window_height
-    gsettings set org.gnome.FileRoller.Dialogs.Extract width 1200
+    gsettings set org.gnome.FileRoller.Dialogs.Extract width $window_width_large
     gsettings set org.gnome.FileRoller.Dialogs.LastOutput height $window_height
-    gsettings set org.gnome.FileRoller.Dialogs.LastOutput width 1200
+    gsettings set org.gnome.FileRoller.Dialogs.LastOutput width $window_width_large
     gsettings set org.gnome.FileRoller.FileSelector sidebar-size $sidebar_width
     gsettings set org.gnome.FileRoller.UI window-height $window_height
-    gsettings set org.gnome.FileRoller.UI window-width 800
+    gsettings set org.gnome.FileRoller.UI window-width $window_width
 fi
 
 # gedit
@@ -86,7 +91,7 @@ if command -v gedit &> /dev/null; then
     gsettings set org.gnome.gedit.preferences.editor tabs-size 'uint32 4'
     # gsettings set org.gnome.gedit.preferences.editor use-default-font false
     gsettings set org.gnome.gedit.state.file-chooser open-recent false
-    gsettings set org.gnome.gedit.state.window size "(800, $window_height)"
+    gsettings set org.gnome.gedit.state.window size "($window_width, $window_height)"
 fi
 
 # gnome-system-monitor
@@ -94,7 +99,7 @@ if command -v gnome-system-monitor &> /dev/null; then
     gsettings set org.gnome.gnome-system-monitor current-tab 'resources'
     gsettings set org.gnome.gnome-system-monitor show-whose-processes 'all'
     gsettings set org.gnome.gnome-system-monitor window-height $window_height_big
-    gsettings set org.gnome.gnome-system-monitor window-width 1130
+    gsettings set org.gnome.gnome-system-monitor window-width $window_width_big
 fi
 
 # mutter
@@ -107,10 +112,10 @@ fi
 if command -v nautilus &> /dev/null; then
     gsettings set org.gtk.gtk4.Settings.FileChooser sidebar-width $sidebar_width
     gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
-    gsettings set org.gtk.gtk4.Settings.FileChooser window-size "(1200, $window_height)"
+    gsettings set org.gtk.gtk4.Settings.FileChooser window-size "($window_width_large, $window_height)"
     gsettings set org.gtk.Settings.FileChooser sidebar-width $sidebar_width
     gsettings set org.gtk.Settings.FileChooser sort-directories-first true
-    gsettings set org.gtk.Settings.FileChooser window-size "(1200, $window_height)"
+    gsettings set org.gtk.Settings.FileChooser window-size "($window_width_large, $window_height)"
     gsettings set org.gnome.nautilus.preferences show-create-link true
     gsettings set org.gnome.nautilus.window-state initial-size '(980, 620)'
 fi
