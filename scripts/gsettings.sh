@@ -9,6 +9,8 @@ window_width=800
 window_width_big=1130
 window_width_large=1200
 
+tab_width=4
+
 # calculator
 if command -v gnome-calculator &> /dev/null; then
     gsettings set org.gnome.calculator show-thousands true
@@ -88,7 +90,7 @@ if command -v gedit &> /dev/null; then
     # gsettings set org.gnome.gedit.preferences.editor editor-font 'Source Code Pro 10'
     gsettings set org.gnome.gedit.preferences.editor insert-spaces true
     gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
-    gsettings set org.gnome.gedit.preferences.editor tabs-size 'uint32 4'
+    gsettings set org.gnome.gedit.preferences.editor tabs-size "uint32 $tab_width"
     # gsettings set org.gnome.gedit.preferences.editor use-default-font false
     gsettings set org.gnome.gedit.state.file-chooser open-recent false
     gsettings set org.gnome.gedit.state.window size "($window_width, $window_height)"
@@ -152,5 +154,5 @@ if command -v gnome-text-editor &> /dev/null; then
     gsettings set org.gnome.TextEditor show-line-numbers true
     gsettings set org.gnome.TextEditor show-right-margin true
     gsettings set org.gnome.TextEditor style-variant 'dark'
-    gsettings set org.gnome.TextEditor tab-width 4
+    gsettings set org.gnome.TextEditor tab-width $tab_width
 fi
