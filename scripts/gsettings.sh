@@ -26,6 +26,12 @@ if command -v gnome-control-center &> /dev/null; then
     gsettings set org.gnome.Settings window-state "($window_width_big, $window_height_big, false)"
 fi
 
+# dconf-editor
+if command -v dconf-editor &> /dev/null; then
+    gsettings set ca.desrt.dconf-editor.Lib:/ca/desrt/dconf-editor/ window-height $window_height
+    gsettings set ca.desrt.dconf-editor.Lib:/ca/desrt/dconf-editor/ window-width $window_width
+fi
+
 # desktop
 gsettings set org.gnome.desktop.input-sources per-window true
 # gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us')]"
