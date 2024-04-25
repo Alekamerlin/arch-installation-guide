@@ -1,5 +1,8 @@
 # arch-installation-guide
+
 A quick installation guide with automation scripts for Arch Linux.
+
+> Attention, this guide describes the Arch Linux installation on PC/laptop with Intel CPU and iGPU. Therefore, the guide doesn't cover all cases. Also, settings in the gsettings script based on my preferences.
 
 ### Prepare an installation disk
 
